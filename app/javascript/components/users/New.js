@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+
 class New extends React.Component {
   render() {
     return (
@@ -22,21 +25,40 @@ class New extends React.Component {
 
           <div class="field">
             <label for="user_image">Image</label>
-            <input type="file" name="user[image]" id="user_image" />
+            <TextField
+              type="file"
+              name="user[image]"
+              label="Image"
+              required
+              id="outlined-required"
+              margin="normal"
+              variant="outlined"
+            />
           </div>
 
           <div class="field">
-            <label for="user_name">Name</label>
-            <input type="text" name="user[name]" id="user_name" />
+            <TextField
+              type="text"
+              name="user[name]"
+              label="Name"
+              required
+              id="outlined-required"
+              margin="normal"
+              variant="outlined"
+            />
           </div>
 
           <div class="actions">
-            <input
+            <Button
+              variant="contained"
+              color="primary"
               type="submit"
               name="commit"
               value="Create User"
               data-disable-with="Create User"
-            />
+            >
+              Create User
+            </Button>
           </div>
         </form>
       </React.Fragment>
